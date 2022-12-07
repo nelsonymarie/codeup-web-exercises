@@ -15,7 +15,7 @@
 //     }
 // };
 //
-// console.log("Raw circle information: ", circle);
+// console.log("Area of a circle with radius ${this.radius} is ${this.getArea);
 //
 // console.log("Circle information rounded to the nearest whole number:");
 // circle.logInfo(true);
@@ -27,4 +27,34 @@
 // circle.radius = 5;
 //
 // console.log("Circle information with a new radius:");
-// circle.logInfo(true);
+// circle.logInfo(true)
+
+//*********************************************************
+
+const PI = 3.141592653589793;
+
+function doRounding(n) {
+    return Math.round(n);
+}
+
+const circle = {
+    radius: 3,
+    getArea: function() {
+        return PI * Math.pow(this.radius, 2);
+    }
+};
+
+console.log(circle.getArea()); /
+console.log(doRounding(circle.getArea()));
+
+if (circle.getArea() % 1 === 0) {
+    console.log('The area of the circle is a whole number.');
+} else {
+    console.log('The area of the circle is not a whole number.');
+}
+
+console.log(circle.getArea().toPrecision(3));
+console.log(circle.getArea().toPrecision(2));
+
+circle.radius = 5;
+console.log(circle.getArea());
