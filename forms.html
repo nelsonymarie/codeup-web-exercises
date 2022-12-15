@@ -1,55 +1,36 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keyword" content="">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <main>
-
-
-    <h1>Register With Us</h1>
-    <form method="POST" action="https://request-inspector.glitch.me/">
-        <label for="email"><br/>Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email"/>
-        <br/>
-        <label for="password">Password:</label>
-
-        <input type="password" id="password" name="password" placeholder="Enter your password"/>
-        <br/>
-        <label for="bio"><br/>Bio:</label>
-        <textarea id="bio" name="bio" placeholder="Enter a short description of yourself"></textarea>
-        <br/>
-        <label>How did you hear about us?</label>
-        <br/>
-        <input type="radio" name="hear-about-us" value="billboard"/> Billboard
-        <br/>
-        <input type="radio" name="hear-about-us" value="radio"/> Radio advertisement
-        <br/>
-        <input type="radio" name="hear-about-us" value="internet"/> Internet advertisement
-        <br/>
-        <input type="radio" name="hear-about-us" value="other"/> Other
-
-        <label>What web browser are you using?</label>
-        <br/>
-        <select name="web-browser">
-            <option value="chrome">Chrome</option>
-            <option value="firefox">Firefox</option>
-            <option value="safari">Safari</option>
-            <option value="edge">Edge</option>
-            <option value="other">Other</option>
-        </select>
-
-        <button type="submit">Submit</button>
+    <form action="#">
+        <fieldset class="width-80">
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <button class="btn btn-block">Login</button>
+        </fieldset>
     </form>
 </main>
-<footer>
-
-</footer>
 </body>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-center">
+                    <a href="#">Back to Home</a>
+                </p>
+            </div>
+</footer>
 </html>
-

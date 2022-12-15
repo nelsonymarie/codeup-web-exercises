@@ -1,0 +1,102 @@
+h1, h2 {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+}body {
+     background-color: #FF0000;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 20px;
+     line-height: 1.5em;
+     color: #333;
+     margin: 0;
+     padding: 0;
+
+
+ }
+body {
+    background-image: url('https://images.unsplash.com/photo-1567201864585-6baec9110dac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+
+}
+
+a:link {
+    color: #FF0000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+a:visited {
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+a:hover {
+    color: #333;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a:active {
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td:nth-child(odd), th:nth-child(odd) {
+    background-color: #4be34b;
+}
+
+td:nth-child(even), th:nth-child(even) {
+    background-color: lightblue;
+}
+
+
+ a:hover {
+     color: red;
+ }
+
+.article > a  {
+    float:right;
+}
+
+
+
+

@@ -1,0 +1,40 @@
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div.message {
+    padding: .5rem 0 .5rem 0.5rem;
+    width: 37.908rem;
+    border-radius: 3px;
+    border: solid rgb(222, 220, 220) 1px;
+    margin: .6rem;
+}
+
+div.message-info {
+    color: rgb(27, 25, 201);
+    background-color: #4c6ace;
+
+}
+
+div.message-success {
+    color: rgb(19, 206, 61);
+    background-color: #4c8824;
+
+}
+
+div.message-warning {
+    color: rgb(161, 52, 75);
+    background-color: #d58162;
+}
+
+div.message-error {
+    color: rgb(94, 41, 94);
+    background-color: #ef04ef;
+}
+
+/*RGB/HEX*/

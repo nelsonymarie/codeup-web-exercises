@@ -27,8 +27,7 @@ body { background-color: #F0F8FF;
     font-family: "sans-serif", monospace;
 }
 
-footer { background-image: url('https://images.unsplash.com/photo-1542684377-0b875fde9563?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmFjayUyMGdyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60');
-    height: 300px;
+footer { background-image: url('https://images.unsplash.com/photo-1670450734728-c4d6f59134f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=700&q=60');
     opacity: 0.5;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,4 +53,16 @@ a:hover {
 }
 a:active {
     color: #4be34b;
+}
+
+td {
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+tr {
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
