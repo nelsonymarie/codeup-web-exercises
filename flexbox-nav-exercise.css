@@ -1,73 +1,66 @@
-/*@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');*/
-/*body {*/
-/*    margin: 0;*/
-/*    background: #222;*/
-/*    font-family: 'Work Sans', sans-serif;*/
-/*    font-weight: 800;*/
+body {
+    background-color: #b8b4b4;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    background-color: #3b3838;
+    /*background-color: #0033ff;*/
+    /*text-align: center;*/
+    /*margin: 0;*/
+    width: 100vw;
+    height: 30px;
+
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*#menu ul li {*/
+/*    !*display: inline-block;*!*/
 /*}*/
 
-/*.container {*/
-/*    width: 80%;*/
-/*    margin: 0 auto;*/
-/*}*/
+#menu ul li a {
+    color: white;
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+.item-r a:hover {
+    float: right;
+}
 
-/*header {*/
-/*    background: #55d6aa;*/
-/*}*/
+#menu ul li a:hover {
+    background-color: #42B881;
+}
 
-/*header::after {*/
-/*    content: '';*/
-/*    display: table;*/
-/*    clear: both;*/
-/*}*/
+.item-r {
+    float: right;
+}
 
-/*.logo {*/
-/*    float: left;*/
-/*    padding: 10px 0;*/
-/*}*/
+.item-r a {
+    color: white;
+    display: block;
+    padding: 3em .2em;
+    text-decoration: none;
+}
 
-/*nav {*/
-/*    float: right;*/
-/*}*/
+.float.right {
+    float: right;
+}
 
-/*nav ul {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    list-style: none;*/
-/*}*/
+.float.left {
+    float: left;
+}
 
-/*nav li {*/
-/*    display: inline-block;*/
-/*    margin-left: 70px;*/
-/*    padding-top: 23px;*/
+.float.center {
+    position: absolute;
+    left: calc( 47% - 3px);
+    text-align: center;
+}
 
-/*    position: relative;*/
-/*}*/
-
-/*nav a {*/
-/*    color: #444;*/
-/*    text-decoration: none;*/
-/*    text-transform: uppercase;*/
-/*    font-size: 14px;*/
-/*}*/
-
-/*nav a:hover {*/
-/*    color: #000;*/
-/*}*/
-
-/*nav a::before {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    height: 5px;*/
-/*    background-color: #444;*/
-
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    width: 0%;*/
-
-/*    transition: all ease-in-out 250ms;*/
-/*}*/
-
-/*nav a:hover::before {*/
-/*    width: 100%;*/
-/*}*/
