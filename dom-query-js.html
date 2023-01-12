@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="main-header">Hello World!</h1>
+<ul>
+    <li data-dbid="1">Item 1</li>
+    <li data-dbid="2">Item 2</li>
+    <li data-dbid="3">Item 3</li>
+    <li data-dbid="4">Item 4</li>
+    <li data-dbid="5">Item 5</li>
+</ul>
+
+<h2 id="sub-header">Hello Again.</h2>
+<p class="sub-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<button id="btn-one">One</button>
+<button id="btn-two">Two</button>
+<button id="btn-three">Three</button>
+<button id="btn-four">Four</button>
+
+<script>
+    (function() {
+        "use strict";
+
+
+       // TODO: Uncomment next line and get the main header element by id
+       // var mainHeader =;
+        const mainHeader = document.getElementById("main-header");
+
+       // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        const newThing = function () {
+            mainHeader.innerHTML = "JavaScript is cool";
+        };
+
+       // TODO: Uncomment the next line and get the sub header element by id
+       // var subHeader = ;
+        const subHeader = function () {
+            document.getElementById("sub-header").style.color = "blue";
+        };
+
+       // TODO: Uncomment the next line lineand get all list items
+       // var listItems =
+        const listItems = document.getElementsByTagName("li");
+
+       // Set text color on every other list item to grey
+       // TODO: Set the text color of subHeader to blue
+        for (let i = 0; i < listItems.length; i++) {
+            if (listItems[i].dataset.dbid === "1") {
+                listItems[i].style.color = "blue";
+            } else if (i % 2 === 0) {
+                listItems[i].style.color = "grey";
+            }
+        }
+
+       // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+
+           // LINE 67 AND LINE 70 WILL AND ANDEVENTS TO CLICKEVENT TO THE REST OF THE BTN'S BY ID'S
+
+       // var subParagraphs = ;
+        const subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+       // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        subParagraphs[0].innerText = "Mission Accomplished!";
+
+       // Add event listeners to buttons
+        document.getElementById("btn-one").addEventListener("click", newThing);
+        document.getElementById("btn-two").addEventListener("click", subHeader);
+
+        let button = document.getElementById("btn-two");
+
+        function func(event) {
+            alert("Done, text is blue!");
+            button.disabled = true;disable button
+            button.removeEventListener("click", func);remove event listener
+        }
+
+        button.addEventListener("click", func);
+
+
+       // Add additional event listeners for buttons 3 and 4 here
+
+
+        document.getElementById("btn-three").addEventListener("click", function () {
+            console.log("Button three was clicked!");
+        });
+        document.getElementById("btn-four").addEventListener("click", function () {
+            console.log("Button three was clicked!");
+        });
+        document.getElementById("btn-four").addEventListener("click", function () {
+            console.log("Button four was clicked!");
+        });
+
+        console.log(window);
+
+
+       console.log(document);
+       let texto = "This DOM IS DONE!";
+       const hablar = (texto) => speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
+       hablar(texto);
+        //
+       window.addEventListener("load", function() {
+          // Create an audio context
+           const audioCtx = new AudioContext();
+        //
+        //
+           const audioSrc = audioCtx.createMediaElementSource(new Audio("exercise-done.mp3"));
+        //
+        //
+           audioSrc.connect(audioCtx.destination);
+        //
+        //   Play the audio
+            audioSrc.mediaElement.play();
+
+    }
+
+
+    })();
+
+</script>
+</body>
+
+</html>
