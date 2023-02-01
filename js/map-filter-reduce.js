@@ -1,78 +1,77 @@
+// This code uses several array methods to manipulate the data in the users array. 
+// The first line with the strict keyword is used to enable JavaScript's strict mode,
+// which makes it easier to write secure code by making it easier to detect common programming errors.
+//
+// The filter() method is used to filter out users who have fewer than three languages, 
+// and the resulting array is stored in the usersWithThreeLangs variable. 
+// The map() method is used to create an array of emails from the users array, and the resulting array is stored in the emailArray variable.
+//
+//The reduce() method is used to calculate the total years of experience, 
+// which is stored in the totalYears variable, and then to calculate the average years of experience, 
+// which is stored in the totalYears/users.length variable. 
+// The reduce() method is also used to create the longestEmail variable, 
+// which stores the longest email address, and the namesString variable, which stores a string of all the users' names.
+
+
 `strict`
 
+const users = [
+    {
+        id: 1,
+        name: "Ryan",
+        email: "ryan@codeup.com",
+        languages: ["ruby", "javascript"],
+        yearsOfExperience: 5
+    },
+    {
+        id: 2,
+        name: "Luis",
+        email: "luis@codeup.com",
+        languages: ["java", "bootstrap", "php"],
+        yearsOfExperience: 6
+    },
+    {
+        id: 3,
+        name: "Zach",
+        email: "zach@codeup.com",
+        languages: ["javascript", "python"],
+        yearsOfExperience: 7
+    },
+    {
+        id: 4,
+        name: "Fernando",
+        email: "fernando@codeup.com",
+        languages: ["java", "php", "C+"],
+        yearsOfExperience: 8
+    },
+    {
+        id: 5,
+        name: "Justin",
+        email: "justin@codeup.com",
+        languages: ["html", "css", "javascript", "bootstrap"],
+        yearsOfExperience: 9
+    }
+];
 
-//**
-//**Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
-//**    Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
-//**    Use .map to create an array of strings where each element is a user's email address
-//**Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
-//**    Use .reduce to get the longest email from the list of users.
-//**    Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-//**Bonus
-//**Use .reduce to get the unique list of languages from the list of users.
-//
-//**    const users = [
-//**    {
-//**        id: 1,
-//**        name: 'ryan',
-//**        email: 'ryan@codeup.com',
-//**        languages: ['clojure', 'javascript'],
-//**        yearsOfExperience: 5
-//**    },
-//**    {
-//**        id: 2,
-//**        name: 'luis',
-//**        email: 'luis@codeup.com',
-//**        languages: ['java', 'scala', 'php'],
-//**        yearsOfExperience: 6
-//**    },
-//**    {
-//**        id: 3,
-//**        name: 'zach',
-//**        email: 'zach@codeup.com',
-//**        languages: ['javascript', 'bash'],
-//**        yearsOfExperience: 7
-//**    },
-//**    {
-//**        id: 4,
-//**        name: 'fernando',
-//**        email: 'fernando@codeup.com',
-//**        languages: ['java', 'php', 'sql'],
-//**        yearsOfExperience: 8
-//**    },
-//**    {
-//**        id: 5,
-//**        name: 'justin',
-//**        email: 'justin@codeup.com',
-//**        languages: ['html', 'css', 'javascript', 'php'],
-//**        yearsOfExperience: 9
-//**    }
-//**];
-// **********************************************************
+const usersWithThreeLangs = users.filter(user => user.languages.length >= 3);
+console.log(usersWithThreeLangs);
 
-// // Create an array of user objects where each user object has at least 3 languages in the languages array
-// const usersWithAtLeastThreeLanguages = users.filter(user => user.languages.length >= 3);
-//
-// // Create an array of strings where each element is a user's email address
-// const emails = users.map(user => user.email);
-//
-// // Get the total years of experience from the list of users and calculate the average
-// const totalYearsOfEx
-// perience = users.reduce((total, user) => total + user.yearsOfExperience, 0);
-// const averageYearsOfExperience = totalYearsOfExperience / users.length;
-//
-// // Get the longest email from the list of users
-// const longestEmail = users.reduce((longest, user) => user.email.length > longest.length ? user.email : longest, "");
-//
-// // Get the list of user names in a single string
-// const names = users.reduce((names, user) => `${names}${names ? ", " : ""}${user.name}`, "");
-//
-// // Get the unique list of languages from the list of users
-// const languages = users.reduce((languages, user) => {
-//     user.languages.forEach(language => {
-//         if (!languages.includes(language)) {
-//             languages.push(language);
-//         }
-//     });
-//     return languages;
-// }, []);
+const emailArray = users.map(user => user.email);
+console.log(emailArray);
+
+const totalYears = users.reduce((total, user) => total + user.yearsOfExperience, 0);
+console.log(totalYears);
+console.log(totalYears / users.length);
+
+const longestEmail = users.reduce((longest, user) => {
+    if (user.email.length > longest.length) {
+        return user.email;
+    } else {
+        return longest;
+    }
+}, "");
+console.log(longestEmail);
+
+const namesString = users.reduce((names, user) => names + ", " + user.name,"Your instructors are these guys: ");
+console.log(namesString);
+
